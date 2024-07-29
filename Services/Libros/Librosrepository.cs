@@ -16,7 +16,7 @@ namespace Servebooks.Services
 
         public void AñadirLibro(Libro libro)
         {
-            _context.Libros.Add(libro);
+            _context.Libro.Add(libro);
             _context.SaveChanges();
         }
     }

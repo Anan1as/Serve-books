@@ -1,4 +1,6 @@
-//using Servebooks.Models;
+using Microsoft.EntityFrameworkCore;
+using Servebooks.Models;
+
 namespace Servebooks.Data
 {
     public class DataContext : DbContext
@@ -11,7 +13,7 @@ namespace Servebooks.Data
         public DbSet<Documento> Documentos { get; set; }
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Historial> Historiales { get; set; }
-        public DbSet<Libro> Libros { get; set; }
+        public DbSet<Libro> Libro { get; set; }
         public DbSet<Prestamo> Prestamos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         

@@ -8,12 +8,12 @@ namespace Serve_books.Models
     public class Libro
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } = null!;
         public int AutorId { get; set; }
-        public DateTime FechaDePublicacion { get; set; }
-        public int NumeroDeCopias { get; set; }
+        public DateTime Fecha_de_publicación { get; set; }
+        public int Numero_de_copias { get; set; }
         public int GeneroId { get; set; }
-        public string Estado { get; set; }
+        public string Estado { get; set; } = null!;
     }
 
 }

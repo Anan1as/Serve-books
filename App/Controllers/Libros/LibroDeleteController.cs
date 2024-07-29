@@ -6,26 +6,26 @@ namespace Servebooks.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class LibroCreateController : ControllerBase
+    public class LibroDeleteController : ControllerBase
     {
         private readonly ILibrosRepository _librosRepository;
 
-        public LibroCreateController(ILibrosRepository librosRepository)
+        public LibroDeleteController(ILibrosRepository librosRepository)
         {
             _librosRepository = librosRepository;
         }
 
-        [HttpPost]
-        public IActionResult AñadirLibro(Libro libro)
+        [HttpDelete]
+        public IActionResult EliminarLibro(Libro libro)
         {
             try
             {
-                _librosRepository.AñadirLibro(libro);
+                _librosRepository.EliminarLibro(libro);
                 return Ok(libro);
             }
             catch (System.Exception)
             {
-                return BadRequest("No se pudo añadir el libro");
+                return BadRequest("No se pudo eliminar el libro");
             }
         }
     }

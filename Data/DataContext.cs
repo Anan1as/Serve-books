@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Servebooks.Models;
+using Serve_books.Models;
 
 namespace Servebooks.Data
 {

@@ -6,26 +6,26 @@ namespace Servebooks.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class LibroCreateController : ControllerBase
+    public class LibroUpdateController : ControllerBase
     {
         private readonly ILibrosRepository _librosRepository;
 
-        public LibroCreateController(ILibrosRepository librosRepository)
+        public LibroUpdateController(ILibrosRepository librosRepository)
         {
             _librosRepository = librosRepository;
         }
 
-        [HttpPost]
-        public IActionResult AñadirLibro(Libro libro)
+        [HttpPut]
+        public IActionResult ActualizarLibro(Libro libro)
         {
             try
             {
-                _librosRepository.AñadirLibro(libro);
+                _librosRepository.ActualizarLibro(libro);
                 return Ok(libro);
             }
             catch (System.Exception)
             {
-                return BadRequest("No se pudo añadir el libro");
+                return BadRequest("No se pudo actualizar el libro");
             }
         }
     }

@@ -5,12 +5,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Servebooks.Models
 {
-    public int Id { get; set; }
-    public string Nombre { get; set; }
-    public int AutorId { get; set; }
-    public DateTime FechaDePublicacion { get; set; }
-    public int NumeroDeCopias { get; set; }
-    public int GeneroId { get; set; }
-    public string Estado { get; set; }
+    public class Libro
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public int AutorId { get; set; }
+        public DateTime FechaDePublicacion { get; set; }
+        public int NumeroDeCopias { get; set; }
+        public int GeneroId { get; set; }
+        public string Estado { get; set; }
+    }
 
 }

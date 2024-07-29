@@ -1,19 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Serve_books.Models;
-using Serve_books.Data;
+using Servebooks.Services;
+using Servebooks.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace Serve_books.Services.Repository
+
+namespace Servebooks.Services
 {
     public class ClienteRepository : IClienteRepository
     {
-        private readonly DataContext DbContext;
+        private readonly DataContext _context;
 
-        public ClienteRepository(DataContext dbContext)
+        public ClienteRepository(DataContext context)
         {
-            DbContext = dbContext;
+            _context = context;
         }
 
         public void CrearPrestamo(Prestamo prestamo)

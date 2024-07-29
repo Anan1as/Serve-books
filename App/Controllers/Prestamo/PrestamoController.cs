@@ -1,17 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Serve_books.Services.Prestamo;
+using Servebooks.Services;
 using Serve_books.Models;
 
 
-namespace Serve_books.Controllers.Prestamo
+namespace Servebooks.Controllers
 {
     public class PrestamoController : ControllerBase
     {
         private readonly IClienteRepository _clienteRepository;
+
         public PrestamoController(IClienteRepository clienteRepository)
         {
-            _clienteRepository =  clienteRepository; 
+            _clienteRepository = clienteRepository;
         }
         
         [HttpPost]

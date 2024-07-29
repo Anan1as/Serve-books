@@ -14,7 +14,7 @@ namespace Serve_books.Models
     public string NumeroDeDocumento { get; set; }
     public string Direccion { get; set; }
     public string Telefono { get; set; }
-    public string Correo { get; set; }
+     public string Correo { get; set; }
     public string Contraseña {get; set; }
     public string Rol { get; set; }
     }

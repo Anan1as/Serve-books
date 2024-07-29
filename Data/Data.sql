@@ -24,6 +24,9 @@ CREATE TABLE Usuarios (
     Correo VARCHAR(255) NOT NULL,
     FOREIGN KEY (DocumentoId) REFERENCES Documento(Id)
 );
+-- ALTER TABLE Usuarios
+-- ADD Contraseña varchar (50) NOT NULL;
+SELECT * FROM Usuarios;
 
 CREATE TABLE Libro (
     Id INT PRIMARY KEY,

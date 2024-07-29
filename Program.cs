@@ -1,5 +1,14 @@
+using Microsoft.EntityFrameworkCore;
 using Servebooks.Data;
+using Servebooks.Services;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DataContext>(opt =>
+opt.UseMySql(builder.Configuration.GetConnectionString("MysqlConnection"),
+Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
+
+builder.Services.AddScoped<ILibrosRepository, LibrosRepository>();
+
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -15,9 +24,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-builder.Services.AddDbContext<DataContext>(opt =>
-opt.UseMySql(builder.Configuration.GetConnectionString("MysqlConnection"),
-Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
 
 app.UseHttpsRedirection();
 

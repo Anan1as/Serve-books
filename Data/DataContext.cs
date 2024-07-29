@@ -1,4 +1,6 @@
-//using Servebooks.Models;
+using Microsoft.EntityFrameworkCore;
+using Servebooks.Models;
+
 namespace Servebooks.Data
 {
     public class DataContext : DbContext

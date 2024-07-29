@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Servebooks.Models
+namespace Serve_books.Models
 {
+    public class Usuario 
+    {
     public int Id { get; set; }
     public string Nombre { get; set; }
     public string Apellido { get; set; }
@@ -13,5 +15,7 @@ namespace Servebooks.Models
     public string Direccion { get; set; }
     public string Telefono { get; set; }
     public string Correo { get; set; }
+    public string Contraseña {get; set; }
     public string Rol { get; set; }
+    }
 }

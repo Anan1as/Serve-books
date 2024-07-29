@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Servebooks.Models
+namespace Serve_books.Models
 {
+    public class libro 
+    {
     public int Id { get; set; }
     public string Nombre { get; set; }
     public int AutorId { get; set; }
@@ -12,5 +14,6 @@ namespace Servebooks.Models
     public int NumeroDeCopias { get; set; }
     public int GeneroId { get; set; }
     public string Estado { get; set; }
+    }
 
 }

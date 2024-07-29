@@ -1,3 +1,4 @@
+using Servebooks.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,6 +15,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+builder.Services.AddDbContext<DataContext>(opt =>
+opt.UseMySql(builder.Configuration.GetConnectionString("MysqlConnection"),
+Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
 
 app.UseHttpsRedirection();
 

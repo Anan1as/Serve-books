@@ -8,6 +8,6 @@ namespace Servebooks.Services
         Libro ObtenerLibro(int id);
         void AñadirLibro(Libro libro);
         void ActualizarLibro(Libro libro);
-        void EliminarLibro(Libro libro);
+        void EliminarLibro(int id);
     }
 }

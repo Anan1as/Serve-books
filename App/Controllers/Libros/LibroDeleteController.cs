@@ -16,12 +16,12 @@ namespace Servebooks.Controllers
         }
 
         [HttpDelete]
-        public IActionResult EliminarLibro(Libro libro)
+        public IActionResult EliminarLibro(int id)
         {
             try
             {
-                _librosRepository.EliminarLibro(libro);
-                return Ok(libro);
+                _librosRepository.EliminarLibro(id);
+                return Ok("Libro eliminado");
             }
             catch (System.Exception)
             {

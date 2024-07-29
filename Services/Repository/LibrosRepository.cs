@@ -30,8 +30,9 @@ namespace Servebooks.Services
             _context.SaveChanges();
         }
 
-        public void EliminarLibro(Libro libro)
+        public void EliminarLibro(int id)
         {
+            var libro = _context.Libro.Find(id);
             _context.Libro.Remove(libro);
             _context.SaveChanges();
         }

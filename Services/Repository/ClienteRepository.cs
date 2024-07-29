@@ -1,23 +1,27 @@
-using Servebooks.Models;
+using Serve_books.Models;
 using Servebooks.Services;
 using Servebooks.Data;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Servebooks.Services
 {
-    public class LibrosRepository : ILibrosRepository
+    public class ClienteRepository : IClienteRepository
     {
         private readonly DataContext _context;
 
-        public LibrosRepository(DataContext context)
+        public ClienteRepository(DataContext context)
         {
             _context = context;
         }
 
-        public void AñadirLibro(Libro libro)
+        public void CrearPrestamo(Prestamo prestamo)
         {
-            _context.Libro.Add(libro);
+            _context.Prestamo.Add(prestamo);
             _context.SaveChanges();
         }
+  
     }
 }
+
+

@@ -3,7 +3,6 @@ using Servebooks.Services;
 using Servebooks.Data;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Servebooks.Services
 {
     public class ClienteRepository : IClienteRepository
@@ -17,11 +16,11 @@ namespace Servebooks.Services
 
         public void CrearPrestamo(Prestamo prestamo)
         {
-            _context.Prestamo.Add(prestamo);
+            _context.Prestamos.Add(prestamo);  
             _context.SaveChanges();
         }
-  
     }
 }
+
 
 

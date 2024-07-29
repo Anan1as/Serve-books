@@ -8,6 +8,7 @@ opt.UseMySql(builder.Configuration.GetConnectionString("MysqlConnection"),
 Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")));
 
 builder.Services.AddScoped<ILibrosRepository, LibrosRepository>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 
 
 // Add services to the container.
